@@ -12,7 +12,23 @@ puts"-------------------------------------------------"
 
 puts "Quel est ton pseudo ?"
 name = gets.chomp
+
 playerH = HumanPlayer.new(name)
+
+ennemies = []
+ennemies << player1 = Player.new("Josiane") 
+ennemies << player2 = Player.new("José")
+
+while playerH.life_points > 0 && (player1.life_points > 0 || player2.life_points >0)
+	puts playerH.show_state
+	puts player1.show_state
+	puts player2.show_state
+end
+puts "La partie est finie"
+if playerH.life_points > 0
+puts "Bravo! Tu as gagne!"
+else
+puts "Loser! Tu as perdu!"
 
 
 =begin
